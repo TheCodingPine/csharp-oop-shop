@@ -36,7 +36,7 @@ namespace prodotti_class
 
         public void StampaCodice()
         {
-            Console.WriteLine("CODICE - " + codice);
+            Console.WriteLine("CODICE - " + CreaCodice());
         }
 
         public void StampaDescrizione()
