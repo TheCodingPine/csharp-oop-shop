@@ -34,6 +34,11 @@ namespace prodotti_class
             Console.WriteLine("NOME PRODOTTO: " + nome);
         }
 
+        public void StampaNomeEsteso()
+        {
+            Console.WriteLine("NOME PRODOTTO ESTESO: " + nome + "-" + codice);
+        }
+
         public void StampaCodice()
         {
             Console.WriteLine("CODICE - " + CreaCodice());
@@ -49,18 +54,12 @@ namespace prodotti_class
             Console.WriteLine(prezzoIvato() + "euro");
         }
 
-
-
-
-
-
-
-
         public void StampaProdotto()
         {
             Console.WriteLine("--------------------------------");
-            StampaNome();
-            StampaCodice();
+            //StampaNome();
+            StampaNomeEsteso();
+            //StampaCodice();
             StampaDescrizione();
             StampaPrezzo();
             Console.WriteLine("--------------------------------");
@@ -68,41 +67,17 @@ namespace prodotti_class
         }
 
 
-
-
-
-        //metodo di aggiunta 
- 
-
-
-
-
-
-
-
-
-
-
         //setter: metodi che permettono di inserire i dati senza che escano dai canoni scelti
 
 
+        //-----------------------Hidden Math----------------------------------------
 
-
-
-
-
-        //---------------------------------------------------------------
-
-
-        //calcolo iva
 
         public double prezzoIvato()
         {
             double totale = Math.Round(prezzo - (prezzo * iva / 100), 2);
             return totale;
         }
-
-
 
         //metodo creacodice casuale
         private int CreaCodice()
@@ -116,13 +91,13 @@ namespace prodotti_class
 }
 
 
-/*
+/*---------------------------------------------------------------------------------------------
 Usate opportunamente ai modificatori di accesso (public, private), i costruttori, i metodi getter e setter ed eventuali altri metodi di “utilità” per fare in modo che:
 -alla creazione di un nuovo prodotto il codice sia valorizzato con un numero random. ----------------done
-- Il codice prodotto sia accessibile solo in lettura-------------------------------------------------
-- Gli altri attributi siano accessibili sia in lettura che in scrittura------------------------------
-- Il prodotto esponga sia un metodo per avere il prezzo base-----------------------------------------
-- uno per avere il prezzo comprensivo di iva---------------------------------------------------------
-- Il prodotto esponga un metodo per avere il nome esteso, ottenuto concatenando codice + nome--------
+- Il codice prodotto sia accessibile solo in lettura-------------------------------------------------done
+- Gli altri attributi siano accessibili sia in lettura che in scrittura------------------------------done
+- Il prodotto esponga sia un metodo per avere il prezzo base-----------------------------------------done
+- uno per avere il prezzo comprensivo di iva---------------------------------------------------------done
+- Il prodotto esponga un metodo per avere il nome esteso, ottenuto concatenando codice + nome--------done
 */
 
