@@ -14,7 +14,7 @@ Console.WriteLine("Programma per aggiungere Prodotti al database");
 while (true)
 {
 
-    Console.WriteLine("------- Metodo di creazione prodotto --------");
+    Console.WriteLine("");
 
     Console.Write("Inserisci il nome prodotto: ");
     string nome = Console.ReadLine();
@@ -27,6 +27,8 @@ while (true)
 
     Console.Write("Inserisci l'iva in percentuale: ");
     int iva = Int32.Parse(Console.ReadLine());
+
+    Console.WriteLine("");
 
 
     Prodotto oggetto1 = new Prodotto(nome, descrizione, prezzo, iva);

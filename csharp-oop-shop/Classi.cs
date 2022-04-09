@@ -46,7 +46,7 @@ namespace prodotti_class
 
         public void StampaPrezzo()
         {
-            Console.WriteLine(prezzo + "&euros;");
+            Console.WriteLine(prezzoIvato() + "euro");
         }
 
 
@@ -64,6 +64,7 @@ namespace prodotti_class
             StampaDescrizione();
             StampaPrezzo();
             Console.WriteLine("--------------------------------");
+            Console.WriteLine("");
         }
 
 
@@ -91,6 +92,17 @@ namespace prodotti_class
 
 
         //---------------------------------------------------------------
+
+
+        //calcolo iva
+
+        public double prezzoIvato()
+        {
+            double totale = Math.Round(prezzo - (prezzo * iva / 100), 2);
+            return totale;
+        }
+
+
 
         //metodo creacodice casuale
         private int CreaCodice()
